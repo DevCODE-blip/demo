@@ -40,7 +40,7 @@ body {
 
 /* BANNER */
 .banner {
-  background: url("https://images.unsplash.com/photo-1581092160562-40aa08e78837")
+  background: url("./z7453673430409_929794939eb4ce845b14daf9656ad929.jpg")
     no-repeat center/cover;
   padding: 120px 20px;
   text-align: center;
@@ -139,37 +139,50 @@ body {
 }
 
 /* FOOTER */
-.footer {
-  background: #9b2c2c;
-  color: white;
-  padding: 50px 20px 20px;
+.school-footer {
+  background: #0b4ea2;
+  color: #fff;
+  padding: 30px 20px 0;
+  position: relative;
+  font-family: Arial, sans-serif;
 }
 
-.footer-container {
+.school-footer-container {
   max-width: 1200px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
 }
 
-.footer-box h3 {
-  margin-bottom: 15px;
+.school-name {
   font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
-.footer-box p,
-.footer-box a {
+.school-footer p {
+  margin: 8px 0;
   font-size: 14px;
-  color: #f0f0f0;
-  margin-bottom: 8px;
-  display: block;
-  text-decoration: none;
 }
 
-.footer-bottom {
+.school-footer-bottom {
+  background: #083d82;
   text-align: center;
-  margin-top: 30px;
+  padding: 12px;
+  margin-top: 20px;
   font-size: 13px;
-  opacity: 0.8;
+}
+
+/* Nút lên đầu trang */
+.scroll-top {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
 }
