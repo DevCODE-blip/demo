@@ -2,101 +2,318 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>Introducing the club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLB Trường THPT Vĩnh Cửu</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+
+  <body id="home">
     <!-- HEADER -->
     <header class="header">
-      <div class="container">
-        <h1 class="logo">Trường THPT Vĩnh Cửu</h1>
-        <nav class="menu">
-          <a href="#">Trang chủ</a>
-          <a href="#">Giới thiệu</a>
-          <a href="#">Hoạt động</a>
-          <a href="#">Thành viên</a>
-          <a href="#">Liên hệ</a>
+      <!-- TOP BAR -->
+      <div class="container topbar">
+        <div class="brand">
+          <h1 class="logo">Trường THPT Vĩnh Cửu</h1>
+          <p class="brand-sub">Sáng tạo • Nhân văn • Đam mê</p>
+        </div>
+
+        <nav class="menu" aria-label="Điều hướng">
+          <a href="#home">Trang chủ</a>
+          <a href="#clubs">CLB</a>
+          <a href="#hoatdong">Hoạt động</a>
+          <a href="#contact">Liên hệ</a>
         </nav>
       </div>
 
       <!-- BANNER -->
-      <div class="banner">
+      <section class="banner" aria-label="Banner">
         <div class="banner-content">
-          <h2>Sáng tạo – Nhân văn – Đam mê</h2>
-          <p>Nơi hội tụ những bạn trẻ yêu thích những thử thách</p>
-          <button class="banner-btn">Tham gia CLB</button>
+          <span class="pill">Cộng đồng • Kỹ năng • Trải nghiệm</span>
+          <h2>Khám phá các Câu lạc bộ của trường</h2>
+          <p>
+            Mỗi CLB là một “ngôi nhà nhỏ” để bạn phát triển năng lực, kết nối
+            bạn bè và tạo nên những kỷ niệm thật đẹp.
+          </p>
+
+          <div class="banner-actions">
+            <button class="btn primary" id="btnScrollClubs">Xem các CLB</button>
+            <button class="btn ghost" id="btnJoin">Tham gia CLB</button>
+          </div>
         </div>
-      </div>
+      </section>
 
       <!-- SLOGAN -->
       <div class="slogan">
-        Học hỏi – Thực hành – Phát triển kỹ năng công nghệ tương lai
+        Học hỏi – Thực hành – Phát triển kỹ năng • Lan tỏa giá trị tốt đẹp trong
+        học đường
       </div>
     </header>
 
     <!-- MAIN CONTENT -->
     <main class="main">
-      <h2 class="section-title">Các Câu Lạc Bộ Trực</h2>
-
-      <div class="content-grid">
-        <div class="content-box">
-          <img src="./VanNghe.jpg" alt="" />
-          <h3>CLB Văn Nghệ</h3>
-          <p>
-            Nơi hội tụ những bạn trẻ yêu ca hát, nhảy múa, biểu diễn và lan tỏa
-            giá trị nghệ thuật trong học đường.
+      <section id="clubs" class="section">
+        <div class="section-head">
+          <h2 class="section-title">Các Câu Lạc Bộ</h2>
+          <p class="section-desc">
+            Nhấn vào từng CLB để xem <strong>album nhiều ảnh</strong> và thông
+            tin chi tiết về <strong>mục đích thành lập</strong>.
           </p>
         </div>
 
-        <div class="content-box">
-          <img src="./tiepsuc.jpg" alt="" />
-          <h3>CLB Tiếp Sức Mùa Thi</h3>
-          <p>
-            Đồng hành cùng sĩ tử trong các kỳ thi, hỗ trợ tinh thần và tiếp thêm
-            động lực vượt vũ môn.
-          </p>
-        </div>
+        <div class="content-grid" role="list">
+          <!-- VAN NGHE -->
+          <article
+            class="content-box"
+            role="listitem"
+            tabindex="0"
+            data-club="vannghe"
+          >
+            <div class="content-media">
+              <img src="./VanNghe.jpg" alt="CLB Văn Nghệ" loading="lazy" />
+              <div class="media-overlay">
+                <span class="badge">Xem album</span>
+              </div>
+            </div>
+            <div class="content-body">
+              <h3>CLB Văn Nghệ</h3>
+              <p class="muted">
+                Nơi hội tụ những bạn trẻ yêu ca hát, nhảy múa, biểu diễn và lan
+                tỏa giá trị nghệ thuật trong học đường.
+              </p>
+              <div class="mini-purpose">
+                <h4>Mục đích</h4>
+                <ul>
+                  <li>Phát hiện &amp; bồi dưỡng năng khiếu.</li>
+                  <li>Tạo sân chơi tích cực, tự tin thể hiện.</li>
+                  <li>Góp phần xây dựng văn hóa trường học.</li>
+                </ul>
+              </div>
+              <div class="hint">Nhấn để xem nhiều hình →</div>
+            </div>
+          </article>
 
-        <div class="content-box">
-          <img src="./danhbanh.jpg" alt="" />
-          <h3>CLB Bóng Đá</h3>
-          <p>
-            Sân chơi thể thao lành mạnh, rèn luyện sức khỏe, tinh thần đồng đội
-            và ý chí chiến thắng.
-          </p>
-        </div>
+          <!-- TIEP SUC -->
+          <article
+            class="content-box"
+            role="listitem"
+            tabindex="0"
+            data-club="tiepsuc"
+          >
+            <div class="content-media">
+              <img
+                src="./tiepsuc.jpg"
+                alt="CLB Tiếp Sức Mùa Thi"
+                loading="lazy"
+              />
+              <div class="media-overlay">
+                <span class="badge">Xem album</span>
+              </div>
+            </div>
+            <div class="content-body">
+              <h3>CLB Tiếp Sức Mùa Thi</h3>
+              <p class="muted">
+                Đồng hành cùng sĩ tử trong các kỳ thi, hỗ trợ tinh thần và tiếp
+                thêm động lực vượt vũ môn.
+              </p>
+              <div class="mini-purpose">
+                <h4>Mục đích</h4>
+                <ul>
+                  <li>Hỗ trợ thí sinh &amp; phụ huynh đúng lúc.</li>
+                  <li>Rèn kỹ năng tình nguyện, làm việc nhóm.</li>
+                  <li>Lan tỏa tinh thần sẻ chia trong cộng đồng.</li>
+                </ul>
+              </div>
+              <div class="hint">Nhấn để xem nhiều hình →</div>
+            </div>
+          </article>
 
-        <div class="content-box">
-          <img src="./hienmau.jpg" alt="" />
-          <h3>CLB Hiến Máu Nhân Đạo</h3>
-          <p>
-            Lan tỏa yêu thương, sẻ chia sự sống thông qua các chương trình hiến
-            máu tình nguyện.
-          </p>
+          <!-- BONG DA -->
+          <article
+            class="content-box"
+            role="listitem"
+            tabindex="0"
+            data-club="bongda"
+          >
+            <div class="content-media">
+              <img src="./danhbanh.jpg" alt="CLB Bóng Đá" loading="lazy" />
+              <div class="media-overlay">
+                <span class="badge">Xem album</span>
+              </div>
+            </div>
+            <div class="content-body">
+              <h3>CLB Bóng Đá</h3>
+              <p class="muted">
+                Sân chơi thể thao lành mạnh, rèn luyện sức khỏe, tinh thần đồng
+                đội và ý chí chiến thắng.
+              </p>
+              <div class="mini-purpose">
+                <h4>Mục đích</h4>
+                <ul>
+                  <li>Rèn thể lực, kỷ luật và sự bền bỉ.</li>
+                  <li>Phát triển tinh thần đồng đội, fair-play.</li>
+                  <li>Đại diện trường tham gia các giải đấu.</li>
+                </ul>
+              </div>
+              <div class="hint">Nhấn để xem nhiều hình →</div>
+            </div>
+          </article>
+
+          <!-- HIEN MAU -->
+          <article
+            class="content-box"
+            role="listitem"
+            tabindex="0"
+            data-club="hienmau"
+          >
+            <div class="content-media">
+              <img
+                src="./hienmau.jpg"
+                alt="CLB Hiến Máu Nhân Đạo"
+                loading="lazy"
+              />
+              <div class="media-overlay">
+                <span class="badge">Xem album</span>
+              </div>
+            </div>
+            <div class="content-body">
+              <h3>CLB Hiến Máu Nhân Đạo</h3>
+              <p class="muted">
+                Lan tỏa yêu thương, sẻ chia sự sống thông qua các chương trình
+                hiến máu tình nguyện.
+              </p>
+              <div class="mini-purpose">
+                <h4>Mục đích</h4>
+                <ul>
+                  <li>Nuôi dưỡng tinh thần nhân ái, trách nhiệm.</li>
+                  <li>Nâng cao nhận thức về hiến máu an toàn.</li>
+                  <li>Kết nối hoạt động thiện nguyện của trường.</li>
+                </ul>
+              </div>
+              <div class="hint">Nhấn để xem nhiều hình →</div>
+            </div>
+          </article>
         </div>
-      </div>
+      </section>
+
+      <section id="hoatdong" class="section section-cta">
+        <div class="cta-card">
+          <div class="cta-text">
+            <h3>Muốn tham gia một CLB?</h3>
+            <p>
+              Hãy chọn CLB phù hợp với sở thích của bạn. Bạn có thể đăng ký tham
+              gia tại Văn phòng Đoàn trường hoặc liên hệ giáo viên phụ trách.
+            </p>
+          </div>
+          <button class="btn primary" id="btnOpenRegister">
+            Đăng ký tham gia
+          </button>
+        </div>
+      </section>
     </main>
 
+    <!-- MODAL: ALBUM + PURPOSE -->
+    <div class="modal" id="clubModal" aria-hidden="true">
+      <div class="modal-overlay" data-close="true"></div>
+
+      <div
+        class="modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="modal-close" aria-label="Đóng" data-close="true">
+          ×
+        </button>
+
+        <div class="modal-content">
+          <div class="gallery">
+            <button
+              class="gallery-nav prev"
+              aria-label="Ảnh trước"
+              id="btnPrev"
+            >
+              ‹
+            </button>
+            <img id="modalImage" src="" alt="" />
+            <button class="gallery-nav next" aria-label="Ảnh sau" id="btnNext">
+              ›
+            </button>
+            <div class="gallery-counter" id="modalCounter">1/1</div>
+          </div>
+
+          <div class="thumbs" id="modalThumbs" aria-label="Ảnh thu nhỏ"></div>
+
+          <div class="modal-text">
+            <h3 id="modalTitle"></h3>
+            <p class="muted" id="modalDesc"></p>
+
+            <div class="modal-section">
+              <h4>Mục đích thành lập</h4>
+              <ul id="modalPurpose"></ul>
+            </div>
+
+            <div class="modal-section">
+              <h4>Hoạt động tiêu biểu</h4>
+              <ul id="modalActivities"></ul>
+            </div>
+
+            <div class="modal-actions">
+              <button class="btn primary" id="btnModalJoin">
+                Đăng ký tham gia
+              </button>
+              <button class="btn ghost" data-close="true">Đóng</button>
+            </div>
+
+            <p class="note">
+              * Mẹo: Dùng phím <strong>←</strong>/<strong>→</strong> để chuyển
+              ảnh, phím <strong>Esc</strong> để đóng.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- FOOTER -->
-    <footer class="school-footer">
-      <div class="school-footer-container">
-        <h3 class="school-name">TRƯỜNG THPT VĨNH CỬU</h3>
+    <footer class="school-footer" id="contact">
+      <div class="school-footer-container footer-single">
+        <div class="footer-panel">
+          <h3 class="school-name">TRƯỜNG THPT VĨNH CỬU</h3>
 
-        <p>
-          📍 <strong>Địa chỉ:</strong> Khu phố Phú Trạch, Phường Tân Triều, Tỉnh
-          Đồng Nai.
-        </p>
-
-        <p>📞 <strong>Điện thoại:</strong> 02513 860 016</p>
-
-        <p>✉️ <strong>Email:</strong> vinhcuutruong3@gmail.com</p>
+          <ul class="footer-info">
+            <li>
+              <span class="footer-icon">📍</span>
+              <span
+                ><strong>Địa chỉ:</strong> Khu phố Phú Trạch, Phường Tân Triều,
+                Tỉnh Đồng Nai.</span
+              >
+            </li>
+            <li>
+              <span class="footer-icon">📞</span>
+              <span><strong>Điện thoại:</strong> 02513 860 016</span>
+            </li>
+            <li>
+              <span class="footer-icon">✉️</span>
+              <span><strong>Email:</strong> vinhcuutruong3@gmail.com</span>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="school-footer-bottom">
-        © 2022 Trường THPT Vĩnh Cửu. Phát triển bởi <strong>DOS.VN</strong>
+        <div class="credit-line1">
+          Thiết kế bởi nhóm: <strong>Công chúa</strong>
+        </div>
+        <div class="credit-line2">
+          Thành viên: Minh Trúc, Bảo Châu, Cẩm Tú, Ngọc Quỳnh, Gia Hân, Thu
+          Trang, Bích Vân, Ngọc Thủy - 12A1
+        </div>
       </div>
 
-      <button class="scroll-top" onclick="scrollToTop()">▲</button>
+      <button class="scroll-top" id="btnScrollTop" aria-label="Lên đầu trang">
+        ▲
+      </button>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
