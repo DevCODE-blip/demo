@@ -6,13 +6,10 @@
   const clubs = {
     vannghe: {
       title: "CLB Văn Nghệ",
-      desc:
-        "Nơi hội tụ những bạn trẻ yêu ca hát, nhảy múa, biểu diễn và lan tỏa giá trị nghệ thuật trong học đường.",
+      desc: "Nơi hội tụ những bạn trẻ yêu ca hát, nhảy múa, biểu diễn và lan tỏa giá trị nghệ thuật trong học đường.",
       images: [
-        "./VanNghe.jpg",
-        "./z7453673430409_929794939eb4ce845b14daf9656ad929.jpg",
-        "./tiepsuc.jpg",
-        "./danhbanh.jpg",
+        "img/clbtvannghe/z7489323215895_b436b9fd6cc08789b5770f34ca13ff92.jpg",
+        "img/clbtvannghe/z7489323216111_75eb3f01dd99eee9e0abf73ad99e8d1f.jpg",
       ],
       purpose: [
         "Phát hiện, bồi dưỡng năng khiếu (hát, múa, diễn xuất, nhạc cụ).",
@@ -28,13 +25,11 @@
 
     tiepsuc: {
       title: "CLB Tiếp Sức Mùa Thi",
-      desc:
-        "Đồng hành cùng sĩ tử trong các kỳ thi, hỗ trợ tinh thần và tiếp thêm động lực vượt vũ môn.",
+      desc: "Đồng hành cùng sĩ tử trong các kỳ thi, hỗ trợ tinh thần và tiếp thêm động lực vượt vũ môn.",
       images: [
-        "./tiepsuc.jpg",
-        "./z7453673430409_929794939eb4ce845b14daf9656ad929.jpg",
-        "./VanNghe.jpg",
-        "./hienmau.jpg",
+        "img/clbtiepsucmt/z7489315535343_bd077e445315b5472d6cf863c4464da3.jpg",
+        "img/clbtiepsucmt/z7489315535572_f59f92e4a2526d94d278736b1509a330.jpg",
+        "img/clbtiepsucmt/z7489315540260_b1860e45dfe65489ea15bc3e1c2a3a8e.jpg",
       ],
       purpose: [
         "Hỗ trợ thí sinh và phụ huynh: hướng dẫn, tư vấn, cung cấp thông tin cần thiết.",
@@ -50,13 +45,11 @@
 
     bongda: {
       title: "CLB Bóng Đá",
-      desc:
-        "Sân chơi thể thao lành mạnh, rèn luyện sức khỏe, tinh thần đồng đội và ý chí chiến thắng.",
+      desc: "Sân chơi thể thao lành mạnh, rèn luyện sức khỏe, tinh thần đồng đội và ý chí chiến thắng.",
       images: [
-        "./danhbanh.jpg",
-        "./z7453673430409_929794939eb4ce845b14daf9656ad929.jpg",
-        "./tiepsuc.jpg",
-        "./VanNghe.jpg",
+        "img/clbbongda/z7489335882775_f8f317e872c97a1645f1514e693148d7.jpg",
+        "img/clbbongda/z7489335891304_3df636e36a6e30e6503f88dd00c24806.jpg",
+        "img/clbbongda/z7489335899564_22426b5c102cd00ad4e2e0343b3412b0.jpg",
       ],
       purpose: [
         "Nâng cao thể lực, sức bền và tinh thần rèn luyện hằng ngày.",
@@ -72,13 +65,12 @@
 
     hienmau: {
       title: "CLB Hiến Máu Nhân Đạo",
-      desc:
-        "Lan tỏa yêu thương, sẻ chia sự sống thông qua các chương trình hiến máu tình nguyện.",
+      desc: "Lan tỏa yêu thương, sẻ chia sự sống thông qua các chương trình hiến máu tình nguyện.",
       images: [
-        "./hienmau.jpg",
-        "./z7453673430409_929794939eb4ce845b14daf9656ad929.jpg",
-        "./tiepsuc.jpg",
-        "./VanNghe.jpg",
+        "img/clbhienmau/z7489343097036_684e8f79b4942f2a52b10348b2f54e91.jpg",
+        "img/clbhienmau/z7489343103077_e8ae05b5250cfca1cfc793291f36c5da.jpg",
+        "img/clbhienmau/z7489343106359_817a8411b81e5c617d2e45e0ba78eac1.jpg",
+        "img/clbhienmau/z7489343113358_4a42ca815a295e8603b9a9e7a69b5bd9.jpg",
       ],
       purpose: [
         "Nuôi dưỡng tinh thần nhân ái, trách nhiệm xã hội của học sinh.",
@@ -109,7 +101,8 @@
   let currentIndex = 0;
 
   // Helpers
-  const qsAll = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const qsAll = (sel, root = document) =>
+    Array.from(root.querySelectorAll(sel));
 
   function setModalOpen(isOpen) {
     if (!modal) return;
@@ -212,7 +205,9 @@
   });
 
   // Modal close
-  qsAll("[data-close='true']").forEach((el) => el.addEventListener("click", closeModal));
+  qsAll("[data-close='true']").forEach((el) =>
+    el.addEventListener("click", closeModal),
+  );
 
   // Modal navigation
   btnPrev?.addEventListener("click", () => setImage(currentIndex - 1));
@@ -244,7 +239,9 @@
 
   // A "giả lập" đăng ký: mở album CLB đầu tiên + hướng dẫn liên hệ
   function joinFlow() {
-    showToast("Đăng ký tham gia CLB: hãy liên hệ Văn phòng Đoàn trường hoặc xem mục Liên hệ bên dưới.");
+    showToast(
+      "Đăng ký tham gia CLB: hãy liên hệ Văn phòng Đoàn trường hoặc xem mục Liên hệ bên dưới.",
+    );
     scrollToEl("#contact");
   }
 
